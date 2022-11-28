@@ -7,7 +7,7 @@ package Interfaz;
 
 /**
  *
- * @author Usuario
+ * @author Jose Daniel Tistoj Reyes 
  */
 public class Principal extends javax.swing.JFrame {
 

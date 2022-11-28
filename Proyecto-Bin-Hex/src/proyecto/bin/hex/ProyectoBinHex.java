@@ -4,18 +4,17 @@
  * and open the template in the editor.
  */
 package proyecto.bin.hex;
-
+import Clases.Metodos;
 /**
  *
- * @author Usuario
+ * @author Jose Daniel Tistoj Reyes
  */
 public class ProyectoBinHex {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
-        // TODO code application logic here
+    Metodos  met = new Metodos();
+    System.out.println(met.DecimalBinario(62));
     }
     
 }
