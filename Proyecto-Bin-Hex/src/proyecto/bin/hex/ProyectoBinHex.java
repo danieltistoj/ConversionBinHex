@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package proyecto.bin.hex;
-import Clases.Metodos;
+import Interfaz.Principal;
 /**
  *
  * @author Jose Daniel Tistoj Reyes
@@ -13,8 +13,8 @@ public class ProyectoBinHex {
 
 
     public static void main(String[] args) {
-    Metodos  met = new Metodos();
-    System.out.println(met.DecimalBinario(62));
+    Principal principal = new Principal();
+    principal.setVisible(true);
     }
     
 }
