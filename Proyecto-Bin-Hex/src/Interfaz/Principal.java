@@ -5,6 +5,8 @@
  */
 package Interfaz;
 
+import java.awt.Color;
+
 /**
  *
  * @author Jose Daniel Tistoj Reyes 
@@ -27,14 +29,20 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         btnTraductorDecimal = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
+        btnTraductorBinario = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        btnTraductorHex = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        btnTraductorOct = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         panelCentral = new javax.swing.JPanel();
-        panelDecinalBinHex = new javax.swing.JPanel();
+        panelTraductorDec = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -47,7 +55,12 @@ public class Principal extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        panelSumBin = new javax.swing.JPanel();
+        panelTraductorBin = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        panelTraductorHex = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        panelTraductorOct = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,6 +70,18 @@ public class Principal extends javax.swing.JFrame {
 
         btnTraductorDecimal.setBackground(new java.awt.Color(34, 87, 126));
         btnTraductorDecimal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        btnTraductorDecimal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTraductorDecimal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mouseClickLateral(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                entrarLateral(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                salirLateral(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -67,22 +92,104 @@ public class Principal extends javax.swing.JFrame {
         btnTraductorDecimal.setLayout(btnTraductorDecimalLayout);
         btnTraductorDecimalLayout.setHorizontalGroup(
             btnTraductorDecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         btnTraductorDecimalLayout.setVerticalGroup(
             btnTraductorDecimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        btnTraductorBinario.setBackground(new java.awt.Color(34, 87, 126));
+        btnTraductorBinario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        btnTraductorBinario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTraductorBinario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mouseClickLateral(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                entrarLateral(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                salirLateral(evt);
+            }
+        });
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Traductor Binario");
+
+        javax.swing.GroupLayout btnTraductorBinarioLayout = new javax.swing.GroupLayout(btnTraductorBinario);
+        btnTraductorBinario.setLayout(btnTraductorBinarioLayout);
+        btnTraductorBinarioLayout.setHorizontalGroup(
+            btnTraductorBinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 51, Short.MAX_VALUE)
+        btnTraductorBinarioLayout.setVerticalGroup(
+            btnTraductorBinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+        );
+
+        btnTraductorHex.setBackground(new java.awt.Color(34, 87, 126));
+        btnTraductorHex.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        btnTraductorHex.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTraductorHex.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mouseClickLateral(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                entrarLateral(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                salirLateral(evt);
+            }
+        });
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Traducto Hexadecimal");
+
+        javax.swing.GroupLayout btnTraductorHexLayout = new javax.swing.GroupLayout(btnTraductorHex);
+        btnTraductorHex.setLayout(btnTraductorHexLayout);
+        btnTraductorHexLayout.setHorizontalGroup(
+            btnTraductorHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        btnTraductorHexLayout.setVerticalGroup(
+            btnTraductorHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+        );
+
+        btnTraductorOct.setBackground(new java.awt.Color(34, 87, 126));
+        btnTraductorOct.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        btnTraductorOct.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTraductorOct.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mouseClickLateral(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                entrarLateral(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                salirLateral(evt);
+            }
+        });
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Traductor Octadecimal");
+
+        javax.swing.GroupLayout btnTraductorOctLayout = new javax.swing.GroupLayout(btnTraductorOct);
+        btnTraductorOct.setLayout(btnTraductorOctLayout);
+        btnTraductorOctLayout.setHorizontalGroup(
+            btnTraductorOctLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+        );
+        btnTraductorOctLayout.setVerticalGroup(
+            btnTraductorOctLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -90,16 +197,22 @@ public class Principal extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(btnTraductorDecimal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnTraductorBinario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnTraductorHex, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnTraductorOct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(btnTraductorDecimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(btnTraductorBinario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(btnTraductorHex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(btnTraductorOct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.LINE_START);
@@ -122,7 +235,7 @@ public class Principal extends javax.swing.JFrame {
         panelCentral.setBackground(new java.awt.Color(85, 132, 172));
         panelCentral.setLayout(new java.awt.CardLayout());
 
-        panelDecinalBinHex.setBackground(new java.awt.Color(85, 132, 172));
+        panelTraductorDec.setBackground(new java.awt.Color(85, 132, 172));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -190,89 +303,146 @@ public class Principal extends javax.swing.JFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("null");
 
-        javax.swing.GroupLayout panelDecinalBinHexLayout = new javax.swing.GroupLayout(panelDecinalBinHex);
-        panelDecinalBinHex.setLayout(panelDecinalBinHexLayout);
-        panelDecinalBinHexLayout.setHorizontalGroup(
-            panelDecinalBinHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelDecinalBinHexLayout.createSequentialGroup()
+        javax.swing.GroupLayout panelTraductorDecLayout = new javax.swing.GroupLayout(panelTraductorDec);
+        panelTraductorDec.setLayout(panelTraductorDecLayout);
+        panelTraductorDecLayout.setHorizontalGroup(
+            panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTraductorDecLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addGroup(panelDecinalBinHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDecinalBinHexLayout.createSequentialGroup()
-                        .addGroup(panelDecinalBinHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelDecinalBinHexLayout.createSequentialGroup()
+                .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTraductorDecLayout.createSequentialGroup()
+                        .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelTraductorDecLayout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel3))
-                            .addGroup(panelDecinalBinHexLayout.createSequentialGroup()
+                            .addGroup(panelTraductorDecLayout.createSequentialGroup()
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panelDecinalBinHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnConvertirDec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(panelDecinalBinHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jSeparator1)
                                 .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)))
                         .addGap(41, 41, 41))
-                    .addGroup(panelDecinalBinHexLayout.createSequentialGroup()
+                    .addGroup(panelTraductorDecLayout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(panelDecinalBinHexLayout.createSequentialGroup()
+            .addGroup(panelTraductorDecLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 27, Short.MAX_VALUE))
+                .addGap(0, 25, Short.MAX_VALUE))
         );
-        panelDecinalBinHexLayout.setVerticalGroup(
-            panelDecinalBinHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelDecinalBinHexLayout.createSequentialGroup()
+        panelTraductorDecLayout.setVerticalGroup(
+            panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTraductorDecLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(panelDecinalBinHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelDecinalBinHexLayout.createSequentialGroup()
+                    .addGroup(panelTraductorDecLayout.createSequentialGroup()
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
-                        .addGroup(panelDecinalBinHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(58, 58, 58)
-                        .addGroup(panelDecinalBinHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(jLabel3)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, 0)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(panelDecinalBinHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelDecinalBinHexLayout.createSequentialGroup()
+                        .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelTraductorDecLayout.createSequentialGroup()
                                 .addGap(66, 66, 66)
                                 .addComponent(jLabel5))
-                            .addGroup(panelDecinalBinHexLayout.createSequentialGroup()
+                            .addGroup(panelTraductorDecLayout.createSequentialGroup()
                                 .addGap(41, 41, 41)
                                 .addComponent(btnConvertirDec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
-        panelCentral.add(panelDecinalBinHex, "card2");
+        panelCentral.add(panelTraductorDec, "card2");
 
-        panelSumBin.setBackground(new java.awt.Color(85, 132, 172));
+        panelTraductorBin.setBackground(new java.awt.Color(85, 132, 172));
 
-        javax.swing.GroupLayout panelSumBinLayout = new javax.swing.GroupLayout(panelSumBin);
-        panelSumBin.setLayout(panelSumBinLayout);
-        panelSumBinLayout.setHorizontalGroup(
-            panelSumBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 588, Short.MAX_VALUE)
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("BIN");
+
+        javax.swing.GroupLayout panelTraductorBinLayout = new javax.swing.GroupLayout(panelTraductorBin);
+        panelTraductorBin.setLayout(panelTraductorBinLayout);
+        panelTraductorBinLayout.setHorizontalGroup(
+            panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTraductorBinLayout.createSequentialGroup()
+                .addContainerGap(230, Short.MAX_VALUE)
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(218, 218, 218))
         );
-        panelSumBinLayout.setVerticalGroup(
-            panelSumBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 363, Short.MAX_VALUE)
+        panelTraductorBinLayout.setVerticalGroup(
+            panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTraductorBinLayout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(175, Short.MAX_VALUE))
         );
 
-        panelCentral.add(panelSumBin, "card3");
+        panelCentral.add(panelTraductorBin, "card3");
+
+        panelTraductorHex.setBackground(new java.awt.Color(85, 132, 172));
+
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("HEX");
+
+        javax.swing.GroupLayout panelTraductorHexLayout = new javax.swing.GroupLayout(panelTraductorHex);
+        panelTraductorHex.setLayout(panelTraductorHexLayout);
+        panelTraductorHexLayout.setHorizontalGroup(
+            panelTraductorHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTraductorHexLayout.createSequentialGroup()
+                .addContainerGap(254, Short.MAX_VALUE)
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(222, 222, 222))
+        );
+        panelTraductorHexLayout.setVerticalGroup(
+            panelTraductorHexLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTraductorHexLayout.createSequentialGroup()
+                .addGap(135, 135, 135)
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(180, Short.MAX_VALUE))
+        );
+
+        panelCentral.add(panelTraductorHex, "card4");
+
+        panelTraductorOct.setBackground(new java.awt.Color(85, 132, 172));
+
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("OCT");
+
+        javax.swing.GroupLayout panelTraductorOctLayout = new javax.swing.GroupLayout(panelTraductorOct);
+        panelTraductorOct.setLayout(panelTraductorOctLayout);
+        panelTraductorOctLayout.setHorizontalGroup(
+            panelTraductorOctLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTraductorOctLayout.createSequentialGroup()
+                .addContainerGap(242, Short.MAX_VALUE)
+                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(205, 205, 205))
+        );
+        panelTraductorOctLayout.setVerticalGroup(
+            panelTraductorOctLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTraductorOctLayout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(170, Short.MAX_VALUE))
+        );
+
+        panelCentral.add(panelTraductorOct, "card5");
 
         jPanel1.add(panelCentral, java.awt.BorderLayout.CENTER);
 
@@ -280,7 +450,7 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 751, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -292,6 +462,63 @@ public class Principal extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mouseClickLateral(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mouseClickLateral
+        if(evt.getSource() == btnTraductorDecimal){
+            panelTraductorDec.setVisible(true);
+            panelTraductorBin.setVisible(false);
+            panelTraductorHex.setVisible(false);
+            panelTraductorOct.setVisible(false);
+        }
+        if(evt.getSource() == btnTraductorBinario){
+            panelTraductorDec.setVisible(false);
+            panelTraductorBin.setVisible(true);
+            panelTraductorHex.setVisible(false);
+            panelTraductorOct.setVisible(false);
+        }
+        if(evt.getSource() == btnTraductorHex){
+            panelTraductorDec.setVisible(false);
+            panelTraductorBin.setVisible(false);
+            panelTraductorHex.setVisible(true);
+            panelTraductorOct.setVisible(false);            
+        }
+        if(evt.getSource() == btnTraductorOct){
+            panelTraductorDec.setVisible(false);
+            panelTraductorBin.setVisible(false);
+            panelTraductorHex.setVisible(false);
+            panelTraductorOct.setVisible(true);           
+        }
+    }//GEN-LAST:event_mouseClickLateral
+
+    private void entrarLateral(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarLateral
+        if(evt.getSource() == btnTraductorDecimal){
+            btnTraductorDecimal.setBackground(new Color(85, 132, 172)); 
+        }
+        if(evt.getSource() == btnTraductorBinario){
+            btnTraductorBinario.setBackground(new Color(85, 132, 172)); 
+        }
+        if(evt.getSource() == btnTraductorHex){
+            btnTraductorHex.setBackground(new Color(85, 132, 172));
+        }
+        if(evt.getSource() == btnTraductorOct){
+            btnTraductorOct.setBackground(new Color(85, 132, 172));
+        }
+    }//GEN-LAST:event_entrarLateral
+
+    private void salirLateral(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirLateral
+        if(evt.getSource() == btnTraductorDecimal){
+            btnTraductorDecimal.setBackground(new Color(34, 87, 126)); 
+        }
+        if(evt.getSource() == btnTraductorBinario){
+            btnTraductorBinario.setBackground(new Color(34, 87, 126)); 
+        }
+        if(evt.getSource() == btnTraductorHex){
+            btnTraductorHex.setBackground(new Color(34, 87, 126));
+        }
+        if(evt.getSource() == btnTraductorOct){
+            btnTraductorOct.setBackground(new Color(34, 87, 126));
+        }
+    }//GEN-LAST:event_salirLateral
 
     /**
      * @param args the command line arguments
@@ -330,9 +557,19 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnConvertirDec;
+    private javax.swing.JPanel btnTraductorBinario;
     private javax.swing.JPanel btnTraductorDecimal;
+    private javax.swing.JPanel btnTraductorHex;
+    private javax.swing.JPanel btnTraductorOct;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -344,11 +581,12 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel panelCentral;
-    private javax.swing.JPanel panelDecinalBinHex;
-    private javax.swing.JPanel panelSumBin;
+    private javax.swing.JPanel panelTraductorBin;
+    private javax.swing.JPanel panelTraductorDec;
+    private javax.swing.JPanel panelTraductorHex;
+    private javax.swing.JPanel panelTraductorOct;
     // End of variables declaration//GEN-END:variables
 }
