@@ -6,6 +6,8 @@
 package Interfaz;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
+import Clases.Metodos;
 
 /**
  *
@@ -13,11 +15,10 @@ import java.awt.Color;
  */
 public class Principal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Principal
-     */
+    private Metodos met;
     public Principal() {
         initComponents();
+        met = new Metodos();
     }
 
     /**
@@ -47,14 +48,14 @@ public class Principal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtTraductorDecimal = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         btnConvertirDec = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        labelOctDec = new javax.swing.JLabel();
+        labelBinTracDec = new javax.swing.JLabel();
+        labelHexDec = new javax.swing.JLabel();
         panelTraductorBin = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         panelTraductorHex = new javax.swing.JPanel();
@@ -204,7 +205,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(53, 53, 53)
+                .addGap(18, 18, 18)
                 .addComponent(btnTraductorDecimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(btnTraductorBinario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -212,7 +213,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btnTraductorHex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(btnTraductorOct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, java.awt.BorderLayout.LINE_START);
@@ -257,15 +258,27 @@ public class Principal extends javax.swing.JFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("BIN:");
 
-        jTextField1.setBackground(new java.awt.Color(85, 132, 172));
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setBorder(null);
+        txtTraductorDecimal.setBackground(new java.awt.Color(85, 132, 172));
+        txtTraductorDecimal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtTraductorDecimal.setForeground(new java.awt.Color(255, 255, 255));
+        txtTraductorDecimal.setBorder(null);
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
 
         btnConvertirDec.setBackground(new java.awt.Color(85, 132, 172));
         btnConvertirDec.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        btnConvertirDec.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConvertirDec.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnConvertirDecMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnConvertirDecMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnConvertirDecMouseExited(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -288,20 +301,20 @@ public class Principal extends javax.swing.JFrame {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Traductor Decimal");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("null");
+        labelOctDec.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelOctDec.setForeground(new java.awt.Color(255, 255, 255));
+        labelOctDec.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelOctDec.setText("null");
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("null");
+        labelBinTracDec.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelBinTracDec.setForeground(new java.awt.Color(255, 255, 255));
+        labelBinTracDec.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelBinTracDec.setText("null");
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("null");
+        labelHexDec.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelHexDec.setForeground(new java.awt.Color(255, 255, 255));
+        labelHexDec.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHexDec.setText("null");
 
         javax.swing.GroupLayout panelTraductorDecLayout = new javax.swing.GroupLayout(panelTraductorDec);
         panelTraductorDec.setLayout(panelTraductorDecLayout);
@@ -315,25 +328,25 @@ public class Principal extends javax.swing.JFrame {
                             .addGroup(panelTraductorDecLayout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelHexDec, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel3))
                             .addGroup(panelTraductorDecLayout.createSequentialGroup()
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(labelOctDec, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnConvertirDec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jSeparator1)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)))
+                                .addComponent(txtTraductorDecimal, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)))
                         .addGap(41, 41, 41))
                     .addGroup(panelTraductorDecLayout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelBinTracDec, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(panelTraductorDecLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
@@ -345,19 +358,19 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(panelTraductorDecLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelOctDec, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelTraductorDecLayout.createSequentialGroup()
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
                         .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelBinTracDec, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(58, 58, 58)
                         .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
                             .addComponent(jLabel3)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtTraductorDecimal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelHexDec, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, 0)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(panelTraductorDecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,7 +380,7 @@ public class Principal extends javax.swing.JFrame {
                             .addGroup(panelTraductorDecLayout.createSequentialGroup()
                                 .addGap(41, 41, 41)
                                 .addComponent(btnConvertirDec, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         panelCentral.add(panelTraductorDec, "card2");
@@ -391,7 +404,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(panelTraductorBinLayout.createSequentialGroup()
                 .addGap(130, 130, 130)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         panelCentral.add(panelTraductorBin, "card3");
@@ -415,7 +428,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(panelTraductorHexLayout.createSequentialGroup()
                 .addGap(135, 135, 135)
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
 
         panelCentral.add(panelTraductorHex, "card4");
@@ -439,7 +452,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(panelTraductorOctLayout.createSequentialGroup()
                 .addGap(137, 137, 137)
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
 
         panelCentral.add(panelTraductorOct, "card5");
@@ -520,6 +533,30 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_salirLateral
 
+    private void btnConvertirDecMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConvertirDecMouseClicked
+        try {
+            if(txtTraductorDecimal.getText().length()!=0){
+             int decimal = Integer.parseInt(txtTraductorDecimal.getText()); 
+             String bin = met.DecimalBinario(decimal);
+             labelBinTracDec.setText(bin);
+            }else{
+                JOptionPane.showMessageDialog(null,"Ingrese un numero","Error",JOptionPane.ERROR_MESSAGE);
+            }
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Ingrese solo numeros decimales","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        
+    }//GEN-LAST:event_btnConvertirDecMouseClicked
+
+    private void btnConvertirDecMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConvertirDecMouseEntered
+      btnConvertirDec.setBackground(new Color(34, 87, 126));
+    }//GEN-LAST:event_btnConvertirDecMouseEntered
+
+    private void btnConvertirDecMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConvertirDecMouseExited
+      btnConvertirDec.setBackground(new Color(85, 132, 172));
+    }//GEN-LAST:event_btnConvertirDecMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -563,7 +600,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel btnTraductorOct;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -576,17 +612,18 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel labelBinTracDec;
+    private javax.swing.JLabel labelHexDec;
+    private javax.swing.JLabel labelOctDec;
     private javax.swing.JPanel panelCentral;
     private javax.swing.JPanel panelTraductorBin;
     private javax.swing.JPanel panelTraductorDec;
     private javax.swing.JPanel panelTraductorHex;
     private javax.swing.JPanel panelTraductorOct;
+    private javax.swing.JTextField txtTraductorDecimal;
     // End of variables declaration//GEN-END:variables
 }
