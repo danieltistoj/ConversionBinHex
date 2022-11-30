@@ -537,8 +537,12 @@ public class Principal extends javax.swing.JFrame {
         try {
             if(txtTraductorDecimal.getText().length()!=0){
              int decimal = Integer.parseInt(txtTraductorDecimal.getText()); 
+             //Obtenemos los resultados en las distintas bases
              String bin = met.DecimalBinario(decimal);
+             String hex = met.decimalHexadecimal(decimal);
+             //los agregamos a los labels
              labelBinTracDec.setText(bin);
+             labelHexDec.setText(hex);
             }else{
                 JOptionPane.showMessageDialog(null,"Ingrese un numero","Error",JOptionPane.ERROR_MESSAGE);
             }

@@ -356,10 +356,8 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="btnConvertirDec" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jSeparator1" max="32767" attributes="0"/>
-                                          <Component id="txtTraductorDecimal" pref="191" max="32767" attributes="0"/>
-                                      </Group>
+                                      <Component id="jSeparator1" max="32767" attributes="0"/>
+                                      <Component id="txtTraductorDecimal" pref="191" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                               </Group>

@@ -14,10 +14,10 @@ public class ProyectoBinHex {
 
 
     public static void main(String[] args) {
-    Metodos met = new Metodos();
-    met.decimalHexadecimal(21);
-    //Principal principal = new Principal();
-    //principal.setVisible(true);
+    //Metodos met = new Metodos();
+    //met.decimalHexadecimal(21);
+    Principal principal = new Principal();
+    principal.setVisible(true);
     }
     
 }

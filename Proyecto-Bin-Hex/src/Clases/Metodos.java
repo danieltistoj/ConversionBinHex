@@ -39,7 +39,7 @@ public class Metodos {
         }
         return nuevaCadena;
     }
-    public ArrayList decimalHexadecimal(int decimal){
+    public String decimalHexadecimal(int decimal){
         int resultado = decimal, residuo;
         arrayHex = new ArrayList<Integer>();
         //comprobamos que sea menor a 16 
@@ -58,9 +58,9 @@ public class Metodos {
             }
         }
         Collections.reverse(arrayHex);
-        System.out.println(arrayHex);
-        System.out.println(cadenaHexadecimal(arrayHex));
-        return arrayHex;
+        //System.out.println(arrayHex);
+        //System.out.println(cadenaHexadecimal(arrayHex));
+        return cadenaHexadecimal(arrayHex);
     }
     
    private String cadenaHexadecimal(ArrayList<Integer> array){
