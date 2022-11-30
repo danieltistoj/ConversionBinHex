@@ -5,6 +5,7 @@
  */
 package proyecto.bin.hex;
 import Interfaz.Principal;
+import Clases.Metodos;
 /**
  *
  * @author Jose Daniel Tistoj Reyes
@@ -13,8 +14,10 @@ public class ProyectoBinHex {
 
 
     public static void main(String[] args) {
-    Principal principal = new Principal();
-    principal.setVisible(true);
+    Metodos met = new Metodos();
+    met.decimalHexadecimal(21);
+    //Principal principal = new Principal();
+    //principal.setVisible(true);
     }
     
 }

@@ -5,11 +5,17 @@
  */
 package Clases;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 /**
  *
  * @author Jose Daniel Tistoj Reyes 
  */
 public class Metodos {
+    private String[] hex = {"0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"};
+    private ArrayList<Integer> arrayHex;
     
     public String DecimalBinario(int decimal){
         int resultado= decimal, residuo;
@@ -33,5 +39,41 @@ public class Metodos {
         }
         return nuevaCadena;
     }
+    public ArrayList decimalHexadecimal(int decimal){
+        int resultado = decimal, residuo;
+        arrayHex = new ArrayList<Integer>();
+        //comprobamos que sea menor a 16 
+        if(resultado<16){
+            arrayHex.add(resultado);
+        }
+        //El ciclo sigue siempre y cuando sea igual o mayor a 16
+        while(resultado>=16){
+            residuo = resultado % 16;
+            resultado = resultado / 16;
+            //vamos agregandoe el residuo a la lista 
+            arrayHex.add(residuo);
+            //cuando el resultado ya sea menor a 16 el resultado se agrega a la lista y no el residuo
+            if(resultado<16){
+                arrayHex.add(resultado);
+            }
+        }
+        Collections.reverse(arrayHex);
+        System.out.println(arrayHex);
+        System.out.println(cadenaHexadecimal(arrayHex));
+        return arrayHex;
+    }
+    
+   private String cadenaHexadecimal(ArrayList<Integer> array){
+       String cadena = "";
+       for(int i : array){
+         if(i<=9){
+             cadena = cadena + i +"";
+         }else{
+
+             cadena  = cadena + hex[i]+"";
+         }  
+       }
+       return cadena;
+   }
     
 }
