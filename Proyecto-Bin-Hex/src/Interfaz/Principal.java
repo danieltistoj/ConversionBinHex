@@ -539,9 +539,11 @@ public class Principal extends javax.swing.JFrame {
              //Obtenemos los resultados en las distintas bases
              String bin = met.DecimalBinario(decimal);
              String hex = met.decimalHexadecimal(decimal);
+             String oct = met.decimalOctadecimala(decimal);
              //los agregamos a los labels
              labelBinTracDec.setText(bin);
              labelHexDec.setText(hex);
+             labelOctDec.setText(oct);
             }else{
                 JOptionPane.showMessageDialog(null,"Ingrese un numero","Error",JOptionPane.ERROR_MESSAGE);
             }

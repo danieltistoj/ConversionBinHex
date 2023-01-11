@@ -18,6 +18,7 @@ public class Metodos {
     private ArrayList<Integer> arrayHex;
     
     public String DecimalBinario(int decimal){
+       
         int resultado= decimal, residuo;
         String cadena="";
         while(resultado != 1){
@@ -30,6 +31,7 @@ public class Metodos {
             }
         }
         cadena = ordenarBinario(cadena);
+        System.out.println(cadena);
         return cadena;
     }
     private String ordenarBinario(String cadena){
@@ -75,10 +77,24 @@ public class Metodos {
        }
        return cadena;
    }
-   private String decimalOctadecimala(int decimal){
+   public String decimalOctadecimala(int decimal){
        int resultado = decimal, residuo;
-       
-       return "";
+       String cadena = "";
+       if(resultado<8){
+           cadena = cadena + resultado + "";
+       }
+       while(resultado >=8){
+           residuo = resultado % 8;
+           resultado = resultado / 8;
+           cadena = cadena+residuo+"";
+           System.out.println(resultado);
+           if(resultado<8){
+               cadena = cadena + resultado+"";
+           }
+       }
+       cadena = ordenarBinario(cadena);
+       System.out.println(cadena);
+       return cadena;
    }
     
 }
