@@ -75,5 +75,10 @@ public class Metodos {
        }
        return cadena;
    }
+   private String decimalOctadecimala(int decimal){
+       int resultado = decimal, residuo;
+       
+       return "";
+   }
     
 }
