@@ -96,5 +96,8 @@ public class Metodos {
        System.out.println(cadena);
        return cadena;
    }
+   public boolean comprobarBinario(String binario){
+       return false;
+   }
     
 }

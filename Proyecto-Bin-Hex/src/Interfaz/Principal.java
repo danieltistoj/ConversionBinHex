@@ -446,6 +446,18 @@ public class Principal extends javax.swing.JFrame {
 
         btnConvertirBin.setBackground(new java.awt.Color(85, 132, 172));
         btnConvertirBin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        btnConvertirBin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConvertirBin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnConvertirBinMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnConvertirBinMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnConvertirBinMouseExited(evt);
+            }
+        });
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
@@ -687,6 +699,22 @@ public class Principal extends javax.swing.JFrame {
     private void btnConvertirDecMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConvertirDecMouseExited
       btnConvertirDec.setBackground(new Color(85, 132, 172));
     }//GEN-LAST:event_btnConvertirDecMouseExited
+
+    private void btnConvertirBinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConvertirBinMouseClicked
+        if(txtTraductorBin.getText().length()!=0){
+            
+        }else{
+            JOptionPane.showMessageDialog(null,"Ingrese un numero binario","Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnConvertirBinMouseClicked
+
+    private void btnConvertirBinMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConvertirBinMouseEntered
+        btnConvertirBin.setBackground(new Color(34, 87, 126));
+    }//GEN-LAST:event_btnConvertirBinMouseEntered
+
+    private void btnConvertirBinMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConvertirBinMouseExited
+        btnConvertirBin.setBackground(new Color(85, 132, 172));
+    }//GEN-LAST:event_btnConvertirBinMouseExited
 
     /**
      * @param args the command line arguments
