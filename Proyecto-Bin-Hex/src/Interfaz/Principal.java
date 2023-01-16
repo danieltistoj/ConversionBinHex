@@ -57,7 +57,18 @@ public class Principal extends javax.swing.JFrame {
         labelBinTracDec = new javax.swing.JLabel();
         labelHexDec = new javax.swing.JLabel();
         panelTraductorBin = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        labelBinOct = new javax.swing.JLabel();
+        labelBinDec = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        labelBinHex = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        txtTraductorBin = new javax.swing.JTextField();
+        jSeparator2 = new javax.swing.JSeparator();
+        btnConvertirBin = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
         panelTraductorHex = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         panelTraductorOct = new javax.swing.JPanel();
@@ -386,24 +397,139 @@ public class Principal extends javax.swing.JFrame {
 
         panelTraductorBin.setBackground(new java.awt.Color(85, 132, 172));
 
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("BIN");
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Traductor Binario");
+
+        labelBinOct.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelBinOct.setForeground(new java.awt.Color(255, 255, 255));
+        labelBinOct.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelBinOct.setText("null");
+
+        labelBinDec.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelBinDec.setForeground(new java.awt.Color(255, 255, 255));
+        labelBinDec.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelBinDec.setText("null");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel9.setText("DEC");
+
+        labelBinHex.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        labelBinHex.setForeground(new java.awt.Color(255, 255, 255));
+        labelBinHex.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelBinHex.setText("null");
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel10.setText("HEX:");
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel14.setText("OCT:");
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel17.setText("BIN");
+
+        txtTraductorBin.setBackground(new java.awt.Color(85, 132, 172));
+        txtTraductorBin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtTraductorBin.setForeground(new java.awt.Color(255, 255, 255));
+        txtTraductorBin.setBorder(null);
+
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+
+        btnConvertirBin.setBackground(new java.awt.Color(85, 132, 172));
+        btnConvertirBin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("Convertir");
+
+        javax.swing.GroupLayout btnConvertirBinLayout = new javax.swing.GroupLayout(btnConvertirBin);
+        btnConvertirBin.setLayout(btnConvertirBinLayout);
+        btnConvertirBinLayout.setHorizontalGroup(
+            btnConvertirBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+        );
+        btnConvertirBinLayout.setVerticalGroup(
+            btnConvertirBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout panelTraductorBinLayout = new javax.swing.GroupLayout(panelTraductorBin);
         panelTraductorBin.setLayout(panelTraductorBinLayout);
         panelTraductorBinLayout.setHorizontalGroup(
             panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTraductorBinLayout.createSequentialGroup()
-                .addContainerGap(230, Short.MAX_VALUE)
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(218, 218, 218))
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
+            .addGroup(panelTraductorBinLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelTraductorBinLayout.createSequentialGroup()
+                            .addComponent(jLabel10)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(labelBinHex, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panelTraductorBinLayout.createSequentialGroup()
+                            .addComponent(jLabel14)
+                            .addGap(5, 5, 5)
+                            .addComponent(labelBinOct, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelTraductorBinLayout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(labelBinDec, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnConvertirBin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jSeparator2)
+                        .addComponent(txtTraductorBin, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)))
+                .addGap(40, 40, 40))
         );
         panelTraductorBinLayout.setVerticalGroup(
             panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTraductorBinLayout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelTraductorBinLayout.createSequentialGroup()
+                        .addComponent(labelBinOct, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60))
+                    .addGroup(panelTraductorBinLayout.createSequentialGroup()
+                        .addGroup(panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(labelBinDec, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(58, 58, 58)
+                        .addGroup(panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(panelTraductorBinLayout.createSequentialGroup()
+                                .addGroup(panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel10)
+                                    .addComponent(labelBinHex, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(73, 73, 73)
+                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelTraductorBinLayout.createSequentialGroup()
+                                .addGroup(panelTraductorBinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel17)
+                                    .addComponent(txtTraductorBin, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, 0)
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnConvertirBin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)))
+                        .addContainerGap(60, Short.MAX_VALUE))))
         );
 
         panelCentral.add(panelTraductorBin, "card3");
@@ -598,6 +724,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel btnConvertirBin;
     private javax.swing.JPanel btnConvertirDec;
     private javax.swing.JPanel btnTraductorBinario;
     private javax.swing.JPanel btnTraductorDecimal;
@@ -605,22 +732,31 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel btnTraductorOct;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel labelBinDec;
+    private javax.swing.JLabel labelBinHex;
+    private javax.swing.JLabel labelBinOct;
     private javax.swing.JLabel labelBinTracDec;
     private javax.swing.JLabel labelHexDec;
     private javax.swing.JLabel labelOctDec;
@@ -629,6 +765,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel panelTraductorDec;
     private javax.swing.JPanel panelTraductorHex;
     private javax.swing.JPanel panelTraductorOct;
+    private javax.swing.JTextField txtTraductorBin;
     private javax.swing.JTextField txtTraductorDecimal;
     // End of variables declaration//GEN-END:variables
 }
