@@ -97,7 +97,21 @@ public class Metodos {
        return cadena;
    }
    public boolean comprobarBinario(String binario){
-       return false;
+       String caracter;
+       int contador =  0;
+       boolean comprobar = true;
+       for(int i=0;i<binario.length();i++){       
+           caracter = String.valueOf(binario.charAt(i));
+           if(!caracter.equals("1")){
+              if(!caracter.equals("0")){
+                  contador++;
+              }
+           }
+       }
+       if(contador>0){
+            comprobar = false;
+       }
+       return comprobar;
    }
     
 }

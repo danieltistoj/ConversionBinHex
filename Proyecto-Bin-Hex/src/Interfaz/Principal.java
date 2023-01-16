@@ -702,7 +702,11 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnConvertirBinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConvertirBinMouseClicked
         if(txtTraductorBin.getText().length()!=0){
-            
+            if(met.comprobarBinario(txtTraductorBin.getText())){
+                System.out.println("es binario");
+            }else{
+                JOptionPane.showMessageDialog(null,"Ingrese solo numeros binario\n"+"Solo 1 o 0 sin espacios","Error",JOptionPane.ERROR_MESSAGE);
+            }
         }else{
             JOptionPane.showMessageDialog(null,"Ingrese un numero binario","Error",JOptionPane.ERROR_MESSAGE);
         }
